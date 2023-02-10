@@ -39,12 +39,12 @@ class ScrapeData:
         soup = BeautifulSoup(html, 'lxml')
         soup2 = soup.select('tr[id*="tabid_2_0_SMER"]')
         df = pd.DataFrame([str(p) for p in soup2], dtype=object)
-        df.to_csv('file1.csv')
-        with open('file1.csv', 'r', encoding='utf8') as f:
+        df.to_csv('Directions.csv')
+        with open('Directions.csv', 'r', encoding='utf8') as f:
             reader = csv.reader(f)
             vData = []
             for i, line in enumerate(f):
-                if i == 2:  # Read only the second line in file1.csv that contain the wind direction
+                if i == 2:  # Read only the second line in Directions.csv that contain the wind direction
                     vData.append(line.strip())
                 elif i > 2:
                     break
@@ -168,7 +168,7 @@ class ScrapeData:
                    'Wind Direction:']
 
         df = pd.DataFrame(data, index=columns)
-        df.to_csv(f'{os.path.join(os.getcwd())}/out.csv', sep='\t', header=False, encoding='utf-8')
+        df.to_csv(f'{os.path.join(os.getcwd())}/Data.csv', sep='\t', header=False, encoding='utf-8')
 
         winSpeed = np.asarray(winSpeed)
         winGusts = np.asarray(winGusts)
