@@ -30,20 +30,20 @@ def write_sms(speed, gusts, temp, winDirection , idx):
           f'{extract_current_date()[1]} :תאריך'+'\n' \
           f'עדכון מזג האוויר'+'\n' \
           f'{hour} שעה' + '\n' \
-          f'{speed[idx]} :מהירות הרוח'+'\n' \
-          f'{gusts[idx]} :עוצמת הרוח'+'\n' \
+          f'{speed[idx]} :מהירות הרוח בקשרים '+'\n' \
+          f'{gusts[idx]} :עוצמת הרוח בקשרים'+'\n' \
           f'{temp[idx]} :טֶמפֶּרָטוּרָה'+'\n' \
           f'{winDirection[idx]} :כיוון הרוח'+'\n'
     sms += "----------------------------"+'\n'
     sms +=f'{nextHour} שעה הבא' + '\n' \
-          f'{speed[idx+1]} :מהירות הרוח'+'\n' \
-          f'{gusts[idx+1]} :עוצמת הרוח'+'\n' \
+          f'{speed[idx+1]} :מהירות הרוח בקשרים'+'\n' \
+          f'{gusts[idx+1]} :עוצמת הרוח בקשרים'+'\n' \
           f'{temp[idx+1]} :טֶמפֶּרָטוּרָה'+'\n' \
           f'{winDirection[idx+1]} :כיוון הרוח'+'\n'
     sms += "----------------------------"+'\n'
     sms += f'{thirdHour} אחרי שעתיים' + '\n' \
-           f'{speed[idx + 2]} :מהירות הרוח' + '\n' \
-           f'{gusts[idx + 2]} :עוצמת הרוח' + '\n' \
+           f'{speed[idx + 2]} :מהירות הרוח בקשרים' + '\n' \
+           f'{gusts[idx + 2]} :עוצמת הרוח בקשרים' + '\n' \
            f'{temp[idx + 2]} :טֶמפֶּרָטוּרָה' + '\n' \
            f'{winDirection[idx + 2]} :כיוון הרוח'+'\n'
 
